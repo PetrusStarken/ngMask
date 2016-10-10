@@ -63,14 +63,14 @@
               });
             },
             post: function($scope, $element, $attrs, controller) {
-              promise.then(function() {
+              promise && promise.then(function() {
                 // get initial options
                 var timeout;
                 var options = maskService.getOptions();
 
                 if (options.mask === undefined)
                   return;
-                  
+
                 function parseViewValue(value) {
                   var untouchedValue = value;
                   // set default value equal 0
